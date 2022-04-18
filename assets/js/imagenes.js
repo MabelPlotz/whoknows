@@ -1,14 +1,17 @@
 
-import Animales from "./animales.js";
+import { Leon, Lobo, Oso, Serpiente, Aguila } from "./animales.js";
 
-var boton = document.getElementById("botton").addEventListener("click", async() => {
-    const {animales} = await Animales.getData
+export const selectAnimal = document.getElementById("animal").addEventListener("change", async () => {
+    // const { animales } = await Animales.getData
     const animalSelected = document.getElementById("animal").value;
+    console.log(animalSelected)
 
     //buscará dentro del arreglo animales, al animal seleccionado y su imagen
-    const imgAnimales = animales.find((p) => p.name == animalSelected).imagen;
-    imagen((i)=> `<img src="/assets/imgs/${animalSelected}/${i} " />`).join("")
+    // const imgAnimales = animalesArray.find(animal => animal.name == animalSelected);
 
-    document.getElementById('preview')[0].innerHTML = imgAnimales
+    // console.log(leon);
+    // imagen((i) => `<img src="/assets/imgs/${animalSelected}/${i} " />`).join("")
+
+    console.log(document.getElementById('preview'))
+    document.getElementById('preview').innerHTML = `<img width="200" src="/assets/imgs/${animalSelected}.png " />`
 })
-export default boton()

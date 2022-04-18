@@ -2,48 +2,48 @@ import Animal from "./animal.js"
 
 // subclases
 class Leon extends Animal {
-    constructor(nombre,edad, img, comentarios, sonido) {
-        super(nombre,edad, img, comentarios, sonido)
+    constructor(nombre, edad, img, comentarios, sonido) {
+        super(nombre, edad, img, comentarios, sonido)
     }
     //metodo
-    rugir(){
+    rugir() {
         //let sonido = this.getSonido()
         console.log(this.getSonido())
     }
 }
 
 class Lobo extends Animal {
-    constructor(nombre,edad, img, comentarios, sonido) {
-        super(nombre,edad, img, comentarios, sonido)
+    constructor(nombre, edad, img, comentarios, sonido) {
+        super(nombre, edad, img, comentarios, sonido)
     }
-    aullar(){
+    aullar() {
     }
 
 }
 class Oso extends Animal {
-    constructor(nombre,edad, img, comentarios, sonido) {
-        super(nombre,edad, img, comentarios, sonido)
+    constructor(nombre, edad, img, comentarios, sonido) {
+        super(nombre, edad, img, comentarios, sonido)
     }
-    gruñir(){
+    gruñir() {
         console.log(this.getSonido())
     }
 }
 class Serpiente extends Animal {
-    constructor(nombre,edad, img, comentarios, sonido) {
-        super(nombre,edad, img, comentarios, sonido)
+    constructor(nombre, edad, img, comentarios, sonido) {
+        super(nombre, edad, img, comentarios, sonido)
     }
-    sisear(){
+    sisear() {
         console.log(this.getSonido())
     }
 }
 class Aguila extends Animal {
-    constructor(nombre,edad, img, comentarios, sonido) {
-        super(nombre,edad, img, comentarios, sonido)
+    constructor(nombre, edad, img, comentarios, sonido) {
+        super(nombre, edad, img, comentarios, sonido)
     }
-    chillar(){
+    chillar() {
         console.log(this.getSonido())
     }
 }
 
-export {Leon, Lobo, Oso, Serpiente, Aguila};
+export { Leon, Lobo, Oso, Serpiente, Aguila };
 //console.log(new Oso('Neko','1/5','foto','hermoso','miau'))
