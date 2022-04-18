@@ -14,15 +14,36 @@ document.getElementById("btnRegistrar").addEventListener(`click`, () => {
 
     let animalSelected;
 
-    if (animal.value == "Leon") {
-        animalSelected = new Leon(animal.value, años.value, comentario.value, previewElement.value)
+    switch (animal.value) {
+        case "Leon":
+            animalSelected = new Leon(animal.value, años.value, 'Leon.png', comentario.value, 'sonido')
+            break;
+        case "Lobo":
+            animalSelected = new Lobo(animal.value, años.value, 'Lobo.png', comentario.value, 'sonido')
+            break;
+        case "Oso":
+            animalSelected = new Oso(animal.value, años.value, 'Oso.png', comentario.value, 'sonido')
+            break;
+        case "Serpiente":
+            animalSelected = new Serpiente(animal.value, años.value, 'Serpiente.png', comentario.value, 'sonido')
+            break;
+        case "Aguila":
+            animalSelected = new Aguila(animal.value, años.value, 'Aguila.png', comentario.value, 'sonido')
+            break;
+        default:
+            break;
     }
-    else if (animal.value == "Lobo") {
-        animalSelected = new Lobo(animal.value, años.value, comentario.value, previewElement.value)
-    }
-    animalSelected = new Oso(animal.value, años.value, comentario.value, previewElement.value)
-    animalSelected = new Serpiente(animal.value, años.value, comentario.value, previewElement.value)
-    animalSelected = new Aguila(animal.value, años.value, comentario.value, previewElement.value)
+
+    // if (animal.value == "Leon") {
+    //     // animalSelected = new Leon(animal.value, años.value, comentario.value, previewElement.value)
+    // }
+    // else if (animal.value == "Lobo") {
+    //     animalSelected = new Lobo(animal.value, años.value, comentario.value, previewElement.value)
+    // }
+
+    // animalSelected = new Oso(animal.value, años.value, comentario.value, previewElement.value)
+    // animalSelected = new Serpiente(animal.value, años.value, comentario.value, previewElement.value)
+    // animalSelected = new Aguila(animal.value, años.value, comentario.value, previewElement.value)
 
     animales.push(animalSelected);
     console.log(animales)
@@ -30,4 +51,11 @@ document.getElementById("btnRegistrar").addEventListener(`click`, () => {
 
 
     // document.querySelector(".comentario").innerHTML 
+    // document.getElementById("Animales").appendChild("<img width="200" src="/assets/imgs/Leon.png " />")
+    const img = document.createElement("img");
+    img.src = `/assets/imgs/${animalSelected.getImg()}`;
+    img.width = "100";
+    img.style = "padding: 5px;"
+
+    document.getElementById("Animales").appendChild(img);
 });
